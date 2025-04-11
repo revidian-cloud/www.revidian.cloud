@@ -1,0 +1,10 @@
+<script defer src="{{ "vendor/font-awesome-6/js/brands.min.js" | relURL }}"></script>
+<script defer src="{{ "vendor/font-awesome-6/js/regular.min.js" | relURL }}"></script>
+<script defer src="{{ "vendor/font-awesome-6/js/solid.min.js" | relURL }}"></script>
+<script defer src="{{ "vendor/font-awesome-6/js/fontawesome.min.js" | relURL }}"></script>
+<script type="text/JavaScript" src="{{ "assets/js/main.js" | relURL }}"></script>
+{{ with .Page.Params.js }}
+	{{ range . }}
+		<script src="{{ . }}" crossorigin=""></script>
+	{{ end }}
+{{ end }}

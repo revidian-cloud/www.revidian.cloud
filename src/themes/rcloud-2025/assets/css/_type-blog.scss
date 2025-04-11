@@ -1,0 +1,101 @@
+main{
+	.content-body{
+		margin: 10px auto 60px;
+		width: 60%;
+		min-width: 300px;
+		text-align: center;
+	}
+
+	article .content{
+			margin: 18px 0 0;
+			font-family: 'Libre Baskerville', serif;
+			font-size: 1.9rem;
+			line-height: 2.0;
+	}
+}
+
+main.list{
+
+	h1{
+		margin: 28px 0;
+	}
+
+	.content-body{
+		p{
+			margin: 0;
+		}
+	}
+
+	article{
+		border-top: 1px solid #333333;
+		padding: 50px 0;
+
+		h2{
+			margin: 0 0 20px;
+			font-size: 4.0rem;
+
+			a{
+				text-decoration: none;
+			}
+		}
+
+		.post-meta{
+			color: $text-secondary-color;
+			font-size: 1.65rem;
+		}
+
+	}
+
+	h2{
+		margin-bottom: 0;
+	}
+
+	footer{
+		text-align: right;
+	}
+}
+
+main.single{
+	article{
+		margin: 7vw 0 0;
+	}
+
+	h1{
+		margin: 0;
+		font-size: 5.0rem;
+	}
+
+	.posted-on{
+		display: block;
+		text-align: center;
+	}
+
+
+	h2::before{
+		margin-right: 8px;
+		content: "#";
+		color: blue;
+	}
+
+	img.feature{
+		display: block;
+		margin: 20px auto 50px;
+	}
+
+	footer{
+		margin-top: 30px;
+		border-top: 1px solid grey;
+	}
+}
+
+@media(max-width: 500px){
+	main.single{
+		h1{
+			font-size: 3.0rem;
+		}
+
+		h2{
+			font-size: 2.0rem;
+		}
+	}
+}

@@ -1,0 +1,301 @@
+/* Hugo code blocks */
+.highlight{
+
+	> div,
+	pre{
+		border-radius: 10px;
+	}
+
+	pre{
+
+		position: relative;
+		margin: 10px 0;
+
+		code::before{
+			position: absolute;
+			top: -5px;
+			right: 10px;
+			content: attr( data-lang );
+			color: blue;
+			font-size: smaller;
+			font-style: italic;
+		}
+	}
+}
+
+ul.menu{
+  display: flex;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  a{
+    text-decoration: none;
+  }
+
+  &.h{
+    flex-direction: row; // default
+
+    li{
+    }
+  }
+
+  &.v{
+    flex-direction: column;
+
+    li{
+    }
+  }
+}
+
+blockquote{
+	position: relative;
+	line-height: 1.0;
+	font-size: larger;
+	font-style: italic;
+	font-weight: bold;
+
+	::before,
+	::after{
+		color: blue;
+		font-size: 4.0rem;
+	}
+
+	::before{
+		position: absolute;
+		top: -10px;
+		left: -30px;
+		content: "“";
+	}
+
+	::after{
+		position: relative;
+		bottom: -26px;
+		right: -2px;
+		content: "”";
+	}
+
+	p{
+	}
+}
+
+figcaption{
+	color: #999999;
+	text-align: center;
+	font-style: italic;
+}
+
+figure.small{
+	width: 40%;
+	min-width: 300px;
+}
+
+figure.medium{
+	width: 60%;
+	min-width: 350px;
+}
+
+div.pager{
+	margin-top: 30px;
+	border-top: 1px solid #333333;
+	height: 60px;
+
+	a.older{
+		float: right;
+	}
+}
+
+
+div.share-buttons{
+	position: fixed;
+	top: 50%;
+	left: 0;
+	margin-top: -96px;
+	text-align: center;
+
+	div,
+	a{
+		display: block;
+		width: 48px;
+		height: 48px;
+		line-height: 48px;
+	}
+
+	div{
+		background-color: white;
+		color: black;
+		font-size: 1.4rem;
+
+		&.share-down{
+			padding-top: 10px;
+			line-height: 15px;
+		}
+
+		&.share-right{
+			display: none;
+		}
+	}
+
+	a{
+		font-size: 2.0rem;
+		transition: width 1s;
+
+		&:hover{
+			width: 64px;
+			transition: width 500ms;
+		}
+
+		&.twitter{
+			background-color: #1DA1F2;
+		}
+
+		&.hacker-news{
+			background-color: #FF6600;
+		}
+
+		&.reddit{
+			background-color: #FF4500;
+		}
+
+		&.facebook{
+			background-color: #3B5998;
+		}
+
+		&.linkedin{
+			background-color: #0077B5;
+		}
+	}
+}
+
+table.design-1{
+	width: 100%;
+
+	thead{
+		border-bottom: 2px solid white;
+	}
+
+	tr:nth-child(odd){
+		background-color: #010101;
+	}
+
+	tr:nth-child(even){
+		background-color: #121212;
+	}
+
+	td{
+		padding: 5px 15px;
+	}
+}
+
+.series-block{
+  
+  ul{
+    display: inline-flex;
+    flex-direction: column;
+
+    li{
+      border-left: 1px solid;
+      border-top: 1px solid;
+      border-right: 1px solid;
+      padding: 6px 0 6px 26px;
+
+      &:first-child{
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+      }
+
+      &:last-child{
+        border-bottom: 1px solid;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+      }
+
+      &:hover{
+        background-color: blue;
+      }
+
+      &.active:before{
+      }
+
+      .fa-li{
+        left: -3px;
+      }
+
+      a{
+        display: block;
+        padding-right: 14px;
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+/*
+ * The standard buttons and its variants.
+ */
+.btn,
+button{
+	display: inline-flex;
+    justify-content: center;
+    align-items: center;
+	border: none;
+	border-radius: $border-radius-std;
+	padding: 0.5em 1.0em;
+	text-decoration: none;
+	text-align: center;
+	font-weight: bold;
+	cursor: pointer;
+
+	&.primary{
+		background-color: $primary-color;
+		color: $on-primary-color;
+
+		&:enabled:hover{
+			background-color: color-mix( in oklab, white 20%, $primary-color );
+		}
+	}
+
+	&.secondary{
+		background-color: $secondary-color;
+		color: $on-secondary-color;
+
+		&:hover{
+			background-color: color-mix( in oklab, white 20%, $secondary-color );
+		}
+	}
+
+	&.danger{
+		background-color: var( --error-red );
+	}
+
+	&.action{
+		border-radius: 6px;
+		background-color: white;
+		padding: 0;
+		width: 22px;
+		height: 22px;
+		line-height: 22px;
+		color: var( --main-black );
+
+		&:hover{
+			background-color: $primary-color;
+		}
+	}
+
+	&:disabled{
+		opacity: 0.5;
+	}
+}
+
+	.btn + .btn{
+		margin-left: 1.9rem;
+	}
+
+
+	.btn-anti,
+	.btn.anti{
+		border: 1px solid $primary-color;
+		background-color: transparent;
+		color: $primary-color;
+	}
+

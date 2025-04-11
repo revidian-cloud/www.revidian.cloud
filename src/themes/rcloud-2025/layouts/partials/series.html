@@ -1,0 +1,12 @@
+{{ $series := index .Params.series 0 }}
+<div class="series-block">
+	<h3>This post is part of the series <a href="/blog/series/{{ urlize $series }}">{{ $series }}</a>.</h4>
+	<ul class="menu v fa-ul">
+	{{ range $num,$post := (index .Site.Taxonomies.series ($series | strings.ToLower)).Pages.ByDate }}
+		<li class="{{ if eq .Permalink $.Page.Permalink }}active{{ end }}">
+			<span class="fa-li"><i class="fa-solid fa-fw {{ if eq .Permalink $.Page.Permalink }}fa-caret-right{{ end }}"></i></span>
+			<a href="{{.Permalink}}">{{ .Params.title}}</a>
+		</li>
+	{{ end }}
+	</ul>
+</div>

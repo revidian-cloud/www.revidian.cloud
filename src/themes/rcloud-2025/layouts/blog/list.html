@@ -1,0 +1,22 @@
+{{ define "main" }}
+{{ if ne .Site.Params.subNav "disable" }}{{ partial "subnav-blog" . }}{{ end }}
+<main class="list">
+	<h1>{{ .Title }}</h1>
+	{{ if .Content }}<div class="content-body">{{ .Content }}</div>{{ end }}
+	{{ range (.Paginate (where .Site.RegularPages.ByDate.Reverse "Section" "blog")).Pages }}
+		<article id="{{ .File.UniqueID }}">
+			<header>
+				<h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+				<span class="post-meta">Posted by Ricardo N Feliciano on <time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time></span>
+			</header>
+			<div class="content">
+				{{ .Summary }}
+			{{ if .Truncated }}
+				<a class="continue" href="{{ .RelPermalink }}">continue&nbsp;→</a>
+			{{ end }}
+			</div>
+		</article>
+	{{ end }}
+	{{ partial "pager" . }}
+</main>
+{{ end }}

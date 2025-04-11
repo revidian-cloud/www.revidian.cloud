@@ -1,0 +1,29 @@
+{{ define "main" }}
+{{ if ne .Site.Params.subNav "disable" }}{{ partial "subnav-blog" . }}{{ end }}
+<main class="single">
+<article id="{{ .File.UniqueID }}">
+	<header>
+		<h1>{{ .Title }}</h1>
+		<span class="posted-on">Posted by Ricardo N Feliciano on <time datetime="{{ .Date }}">{{ .Date.Format "January 2, 2006" }}</time></span>
+		{{if .Params.series }}{{ partial "series" . }}{{ end }}
+	{{ if and (.Params.feature) (ne .Params.featureHide true) }}
+		<img class="feature" src="/assets/img/feature/{{ .Params.feature }}" alt="" />
+	{{ end }}
+	</header>
+	<div class="content">{{ .Content }}</div>
+	<footer>
+		<p><strong><i class="fa fa-caret-right fa-lg"></i> Found this post useful?</strong> Subscribe to my <a href="/newsletter">newsletter</a>.</p>
+	</footer>
+</article>
+{{ if .Site.Params.discourse }}
+	{{ if hugo.IsProduction }}
+		{{ partial "discourse-embed.html" . }}
+	{{ else }}
+		<p>In production mode, Discourse comments will appear here.</p>
+	{{ end }}
+{{ else }}
+	<p>Discourse powered comments can appear here if you turn the feature on.</p>
+{{ end }}
+</main>
+{{ partial "share-buttons" . }}
+{{ end }}

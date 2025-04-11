@@ -1,0 +1,26 @@
+.aligncenter{
+	display: block;
+	margin-right: auto;
+	margin-left: auto;
+	text-align: center;
+	clear: both;
+}
+
+.alignleft{
+	float: left;
+	margin-right: 1.5rem;
+}
+
+.alignright{
+	float: right;
+	margin-left: 1.5rem;
+}
+
+.primary-color{
+  color: $primary-color;
+}
+
+.page-wrapper{
+  padding-left: 20px;
+  padding-right: 20px;
+}

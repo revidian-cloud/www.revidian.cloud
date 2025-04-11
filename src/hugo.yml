@@ -1,0 +1,48 @@
+baseurl: "https://www.revidian.cloud/"
+title: "Revidian Cloud"
+languageCode: "en-us"
+theme: "rcloud-2025"
+
+googleAnalytics: "G-95ZS68ZQBW"
+
+enableEmoji: true
+
+params:
+  description: "A hub for all of your Internet assets - domains, services, TLS, etc."
+
+blackfriday:
+  hrefTargetBlank: true
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true
+  highlight:
+    style: 'nord'
+    lineNos: true
+    lineNumbersInTable: true
+
+menu:
+  main:
+  - name: "Pricing"
+    pageRef: "/pricing"
+    weight: 10
+  - name: "Contact"
+    pageRef: "/contact"
+    weight: 20
+  - name: "Newsletter"
+    pageRef: "/newsletter"
+    weight: 30
+  social:
+  - name: "bluesky"
+    url: "https://bsky.app/profile/revidian.cloud"
+    weight: 10
+  - name: "mastodon"
+    url: "https://social.linodians.com/@RevidianCloud"
+    weight: 20
+  - name: "linkedin"
+    url: "https://www.linkedin.com/company/revidian-cloud"
+    weight: 30
+  - name: "github"
+    url: "https://github.com/revidian-cloud"
+    weight: 40

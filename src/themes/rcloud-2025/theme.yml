@@ -1,0 +1,10 @@
+name: "FelicianoTech's 2019 Theme"
+description: |
+  FelicianoTech's 2019 theme is a Strawberry theme originally designed by
+  Ricardo for www.Feliciano.Tech back in 2019. It's a darker style theme with
+  large text designed mostly for reading and showing off projects.
+license: "MIT"
+source: "https://github.com/strawberry-themes/ftech-2019"
+authors:
+  - name: "Ricardo N Feliciano"
+    email: "Ricardo@Feliciano.Tech"

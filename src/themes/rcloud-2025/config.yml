@@ -1,0 +1,10 @@
+# These are the available variables you can use under .Site.params in your
+# config.yml file with their default variables.
+
+accentColor: "#FF4088"  # Hugo pink
+subNav: "enable"  # enable or disable
+titleFont: ""  # set a custom Google Font name
+homepageFooter: true  # whether or not to display the footer on the homepage
+discourse:
+  username: ""
+  url: ""

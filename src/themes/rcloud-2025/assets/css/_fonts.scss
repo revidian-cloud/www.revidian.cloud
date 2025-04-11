@@ -1,0 +1,73 @@
+html{
+	font-size: 62.5%;
+}
+
+body{
+	line-height: 1.5;
+	font-family: 'Inter', sans-serif;
+	font-size: 1.6rem;
+    font-optical-sizing: auto;
+}
+
+body > header{
+
+	.site-title{
+		font-size: 2.2rem;
+	}
+
+	a{
+		text-decoration: none;
+	}
+
+	ul.menu li.active a{
+		font-weight: bold;
+	}
+	ul.menu.main{
+		a{
+		}
+
+		li.active a{
+			font-weight: 500;
+		}
+	}
+}
+
+body > nav.sub a{
+}
+
+main{
+	h1,
+	h2,
+	h3,
+	h4,
+	h5{
+	}
+
+	h1{
+		text-align: center;
+		font-size: 4.0rem;
+	}
+
+	.content a{
+		font-weight: bold;
+	}
+
+	a.continue{
+		font-weight: bold;
+	}
+
+	a.comment{
+		font-weight: bold;
+	}
+}
+
+body.home main{
+	h1{
+		font-size: 6.0rem;
+	}
+
+	.content-body{
+		font-family: 'Libre Baskerville', serif;
+		font-size: 2.4rem;
+	}
+}

@@ -1,0 +1,46 @@
+form.standard{
+	margin: 0 auto;
+	width: 60%;
+	
+	span.asterisk{
+		color: red;
+		font-size: larger;
+	}
+
+	.indicates-required{
+		text-align: right;
+		font-size: smaller;
+	}
+
+	label{
+		display: block;
+		margin-bottom: 10px;
+	}
+
+    // For all inputs that have a rectanble shape and accept text.
+	input,
+	textarea{
+		display: block;
+		margin-bottom: 10px;
+		border: none;
+		border-radius: $border-radius-std;
+        background-color: $input-bg-color;
+        padding: 0.7em 0.9em;
+		width: 100%;
+        font-size: 1.8rem;
+	}
+
+	input{
+	}
+
+	textarea{
+		height: 100px;
+	}
+
+  button{
+    display: flex;
+    margin-right: auto;
+    margin-left: auto;
+    font-size: 2.0rem;
+  }
+}
