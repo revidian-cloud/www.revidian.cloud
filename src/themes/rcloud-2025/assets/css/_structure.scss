@@ -1,0 +1,158 @@
+body{
+	display: flex;
+	flex-direction: column;
+	background-color: $body-bg-color;
+	min-height: 100vh;
+	border-left: $primary-color solid 6px;
+}
+
+body > header{
+  display: flex;
+  align-items: center;
+  height: 88px;
+
+  .site-title{
+    display: block;
+    margin-right: 5px;
+
+    img{
+      margin-right: 5px;
+      height: 30px;
+    }
+  }
+  
+  a{
+    color: $dark-grey-color;
+  }
+
+  nav{
+    flex-grow: 1;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    a{
+     color: $silver-color;
+    }
+
+    .btn{
+      font-size: smaller;
+    }
+  }
+}
+
+body > header nav{
+	padding: 0 20px;
+
+	ul.main li{
+		padding: 0 7px;
+
+		i{
+			margin-left: 5px;
+		}
+
+		&.social-links{
+			display: none;
+		}
+	}
+
+	a.toggle{
+		display: none;
+	}
+}
+
+/*
+ * General style.
+ */
+body > nav.sub{
+  border-bottom: 1px solid #DEDEDE;
+	padding: 0 25px;
+	height: 50px;
+	line-height: 50px;
+	color: #FFFFFF;
+    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px, rgba(0, 0, 0, 0.03) 0px 2px 6px 0px;
+
+	ul{
+		float: right;
+
+		li{
+			padding: 0 6px;
+		}
+	}
+}
+
+main{
+	flex-grow: 1;
+}
+
+main.list,
+main.single{
+	margin: 0 14% 60px;
+
+	img{
+		max-width: 100%;
+	}
+
+	article .content{
+		margin: 15px 8% 0;
+	}
+}
+
+body > footer{
+  display: flex;
+  padding: 40px 0 20px;
+	//justify-content: space-between;
+	//align-items: flex-end;
+	//margin-top: 50px;
+  background-color: $dark-grey-color;
+  color: $on-secondary-color;
+	//padding: 0 4% 15px;
+	//height: 150px;
+	//text-align: center;
+
+  div{
+    flex-grow: 1;
+    width: 25%;
+
+    h3{
+      margin-top: 0;
+    }
+  }
+
+  .site-title{
+    display: block;
+    margin-bottom: 12px;
+    text-decoration: none;
+
+      img{
+        padding-right: 5px;
+        height: 26px;
+        filter: invert(22%) sepia(49%) saturate(2181%) hue-rotate(329deg) brightness(88%) contrast(90%);
+      }
+  }
+
+  .menu.h{
+    gap: 8px;
+
+    i{
+     font-size: 2.0rem;
+    }
+  }
+
+
+  a{
+    color: $on-secondary-color;
+  }
+}
+
+
+//-------------------------------------
+// Types / Layouts
+//-------------------------------------
+body.type-blog{
+	@import "type-blog";
+}
+
+body.section-projects{
+	@import "section-projects";
+}

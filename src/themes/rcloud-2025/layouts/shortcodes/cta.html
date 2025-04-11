@@ -1,0 +1,10 @@
+{{ with .Get "text" }}{{ else }}
+	{{ errorf "The %q shortcode requires parameter 'text'" .Name }}
+{{ end }}
+{{ with .Get "url" }}{{ else }}
+	{{ errorf "The %q shortcode requires parameter 'url'" .Name }}
+{{ end }}
+<div class="shortcode-cta" style="width:{{ with .Get "width" }}{{ . }}{{ else }}auto{{ end }}">
+	<p>{{ .Inner }}</p>
+	<a href="{{ .Get "url" }}" {{ with .Get "newtab" }}target="_blank"{{ end }}>{{ .Get "text" }}</a>
+</div>

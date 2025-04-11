@@ -1,0 +1,7 @@
+<style>
+	{{ with .Site.Params.titleFont }}
+	.site-title{
+		font-family: '{{ replace . " " "+" }}';
+	}
+	{{ end }}
+</style>

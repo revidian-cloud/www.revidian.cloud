@@ -1,0 +1,37 @@
+{{- define "main" }}
+<main>
+	<section class="intro">
+		<h1>A hub for all of your<br><span>Internet assets</span>.</h1>
+		<img src="/assets/img/web-app-screenshot.jpg">
+	</section>
+	<section class="explain">
+		<h2>Management Layer</h2>
+		<strong>Imports &amp; Notifications</strong>
+		<div>
+			<img src="/assets/img/large-icon-cloudflare.png">
+			<img src="/assets/img/large-icon-namecheap.png">
+			<img src="/assets/img/large-icon-porkbun.png">
+			<i class="fa-solid fa-right-long"></i>
+			<img src="/assets/img/large-icon-revidian-cloud.png">
+			<i class="fa-solid fa-right-long"></i>
+			<img src="/assets/img/large-icon-mattermost.png">
+			<img src="/assets/img/large-icon-slack.png">
+		</div>
+		<p>Import domain names from their registrars into Revidian Cloud. Keep an eye on them in one place and send notifications to where you tend to hang out, not just your inbox.</p>
+	</section>
+	<section class="social">
+		<p>Find us on the social web</p>
+		<ul class="menu h social">
+			<li><a class="fa-layers fa-3x" href="https://bsky.app/profile/feliciano.tech" rel="me" target="_blank"><i class="fa-solid fa-square" style="color:#08F"></i><i class="fab fa-bluesky" data-fa-transform="shrink-8"></i></a></li>
+			<li><a class="fa-layers fa-3x" href="https://social.linodians.com/@FelicianoTech" rel="me" target="_blank"><i class="fa-solid fa-square" style="color:#6364FF"></i><i class="fab fa-mastodon" data-fa-transform="shrink-8"></i></a></li>
+			<li><a class="fa-layers fa-3x" href="https://www.linkedin.com/in/ricardofeliciano" rel="me" target="_blank"><i class="fa-solid fa-square" style="color:#0A66C2"></i><i class="fab fa-linkedin" data-fa-transform="shrink-8"></i></a></li>
+		</ul>
+	</section>
+	<section class="newsletter">
+		<h2>Stay updated</h2>
+		<p>Keep up-to-date on new features and the occasional announcement by signing up for our newsletter.
+		<a class="button" href="{{ "newsletter/" | relURL }}">Join</a>
+		</p>
+	</section>
+</main>
+{{ end }}

@@ -1,0 +1,16 @@
+{{- $style := resources.Get "vendor/sanitize-13.0/sanitize.css" | minify -}}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+{{- $style := resources.Get "css/main.scss" | resources.ExecuteAsTemplate "style.main.scss" . | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{- $style := resources.Get "css/mobile.scss" | resources.ExecuteAsTemplate "style.mobile.scss" . | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}" media="(max-width:1000px)">
+{{- $style := resources.Get "css/homepage.scss" | resources.ExecuteAsTemplate "style.homepage.scss" . | toCSS | minify | fingerprint }}
+	<link rel="stylesheet" href="{{ $style.RelPermalink }}">
+{{ with .Page.Params.css }}
+	{{ range . -}}
+		<link rel="stylesheet" href="{{ . }}" crossorigin="">
+	{{- end }}
+{{ end }}

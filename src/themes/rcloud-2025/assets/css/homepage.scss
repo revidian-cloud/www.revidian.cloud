@@ -1,0 +1,90 @@
+@import "globals";
+@import "colors";
+
+main{
+  font-size: 3.0rem;
+}
+
+h1{
+  line-height: 1.1;
+
+  span{
+    color: $silver-color;
+  }
+}
+
+section{
+  padding: 50px 40px;
+
+  > h2,
+  > h3{
+    margin-top: 0;
+  }
+}
+
+section.intro{
+  margin-top: 50px;
+
+  img{
+    display: block;
+    margin: 20px auto 0;
+    border-radius: 10px;
+    width: 70%;
+  }
+}
+
+section.explain{
+  background-color: $dark-grey-color;
+  text-align: center;
+  color: white;
+
+  h2{
+    font-size: 1.7rem;
+  }
+
+  strong{
+    display: block;
+  }
+
+  div{
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    margin: 20px 0;
+
+    img{
+      width: 80px;
+    }
+  }
+
+  p{
+    margin: 0 auto;
+    min-width: 400px;
+    max-width: 600px;
+    font-size: 2.2rem;
+  }
+}
+
+section.social{
+  text-align: center;
+
+  ul{
+    display: inline-flex;
+
+    a{
+      color: white;
+    }
+  }
+}
+
+section.newsletter{
+  background-color: #E2E8F0;
+}
+
+body{
+	main{
+		p{
+			margin: 0;
+		}
+	}
+}
