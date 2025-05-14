@@ -26,6 +26,7 @@
 </head>
 <body class="{{ .Kind }}{{ with .Section }} section-{{ . }}{{ end }} type-{{ .Type }}{{ with .Layout }} layout-{{ . }}{{ end }}">
 	{{ partial "header" . }}
+	{{ block "subnav" . }}{{ end }}
 	{{ block "main" . }}{{ end }}
 	{{ partial "footer" . }}
 	{{ partial "js-footer" . }}

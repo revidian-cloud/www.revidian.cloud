@@ -1,9 +1,12 @@
 {{- $currentPage := . -}}
-<header class="page-wrapper">
-	<a class="site-title" href="/"><img src="/assets/img/re-logo.svg" alt="Revidian Cloud logo">{{ .Site.Title }}</a>
-	<nav>
+<header>
+	<nav class="global">
+		Revidian
+	</nav>
+	<nav class="main">
+		<a class="site-title" href="/"><img src="/assets/img/re-logo.svg" alt="Revidian Cloud logo">{{ .Site.Title }}</a>
 		{{ partial "menu.html" (dict "menuID" "main" "dir" "h" "page" .) }}
-		<a class="btn secondary" href="https://app.revidian.cloud/signup">Go to app</a>
 		<a class="toggle" onclick="toggleMainNav();"><span class="fas fa-bars"></span></a>
+		<a class="btn secondary" href="https://app.revidian.cloud/signup">Go to app</a>
 	</nav>
 </header>

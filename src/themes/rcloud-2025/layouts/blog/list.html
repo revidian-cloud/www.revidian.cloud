@@ -1,5 +1,5 @@
+{{ define "subnav" }}{{ partial "subnav-blog" . }}{{ end }}
 {{ define "main" }}
-{{ if ne .Site.Params.subNav "disable" }}{{ partial "subnav-blog" . }}{{ end }}
 <main class="list">
 	<h1>{{ .Title }}</h1>
 	{{ if .Content }}<div class="content-body">{{ .Content }}</div>{{ end }}

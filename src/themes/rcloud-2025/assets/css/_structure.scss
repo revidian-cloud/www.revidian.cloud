@@ -3,13 +3,22 @@ body{
 	flex-direction: column;
 	background-color: $body-bg-color;
 	min-height: 100vh;
-	border-left: $primary-color solid 6px;
 }
 
 body > header{
-  display: flex;
-  align-items: center;
-  height: 88px;
+  background-color: black;
+
+  nav.global{
+    height: 42px;
+  }
+
+  nav.main{
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
+    background-color: $primary-color;
+    height: 50px;
+  }
 
   .site-title{
     display: block;
@@ -39,6 +48,11 @@ body > header{
       font-size: smaller;
     }
   }
+}
+
+body > nav.sub{
+  background-color: $primary-color;
+  height: 42px;
 }
 
 body > header nav{
@@ -83,6 +97,7 @@ body > nav.sub{
 
 main{
 	flex-grow: 1;
+	border-left: $primary-color solid 6px;
 }
 
 main.list,
