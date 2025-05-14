@@ -21,6 +21,8 @@
 	{{ partial "open-graph" . }}
 	{{ partial "verifications" . }}
 	<link rel="alternate" type="application/rss+xml" href="/blog/index.xml" title="{{ .Site.Title }}">
+	<script defer data-domain="revidian.cloud" src="https://analytics.revidian.com/js/script.file-downloads.outbound-links.tagged-events.js"></script>
+	<script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
 </head>
 <body class="{{ .Kind }}{{ with .Section }} section-{{ . }}{{ end }} type-{{ .Type }}{{ with .Layout }} layout-{{ . }}{{ end }}">
 	{{ partial "header" . }}
