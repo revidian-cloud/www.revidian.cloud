@@ -27,12 +27,15 @@ menu:
   - name: "Pricing"
     pageRef: "/pricing"
     weight: 10
+  - name: "Blog"
+    pageRef: "/blog"
+    weight: 20
   - name: "Contact"
     pageRef: "/contact"
-    weight: 20
+    weight: 30
   - name: "Newsletter"
     pageRef: "/newsletter"
-    weight: 30
+    weight: 40
   social:
   - name: "bluesky"
     url: "https://bsky.app/profile/revidian.cloud"

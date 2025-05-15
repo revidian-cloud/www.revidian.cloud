@@ -5,6 +5,35 @@ body{
 	min-height: 100vh;
 }
 
+/*
+ * This covers the main navigation inside the header as well as the sub-nav
+ * that sometimes appears right below the header.
+ */
+nav.main,
+nav.sub{
+
+  background-color: $primary-color;
+
+  a{
+    color: $on-primary-color;
+    text-decoration: none;
+  }
+
+  li a{
+    border: 1px solid transparent;
+    border-radius: 4px;
+    padding: 2px 6px;
+
+    &:hover{
+      border: 1px solid rgba( 255, 255, 255, 0.1 );
+    }
+
+    &.active{
+      background-color: rgba( 255, 255, 255, 0.1 );
+    }
+  }
+}
+
 body > header{
   background-color: black;
 
@@ -16,7 +45,6 @@ body > header{
     border-top-left-radius: 8px;
     border-top-right-radius: 8px;
     border-bottom: 1px solid rgba( 0, 0, 0, 0.1 );
-    background-color: $primary-color;
     height: 50px;
   }
 
@@ -30,9 +58,6 @@ body > header{
     }
   }
   
-  a{
-    color: $dark-grey-color;
-  }
 
   nav{
     flex-grow: 1;
@@ -51,7 +76,9 @@ body > header{
 }
 
 body > nav.sub{
-  background-color: $primary-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
   height: 42px;
 }
 
@@ -79,12 +106,8 @@ body > header nav{
  * General style.
  */
 body > nav.sub{
-  border-bottom: 1px solid #DEDEDE;
 	padding: 0 25px;
-	height: 50px;
-	line-height: 50px;
 	color: #FFFFFF;
-    box-shadow: rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0) 0px 0px 0px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px, rgba(0, 0, 0, 0.03) 0px 2px 6px 0px;
 
 	ul{
 		float: right;
