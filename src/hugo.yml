@@ -46,3 +46,13 @@ menu:
   - name: "github"
     url: "https://github.com/revidian-cloud"
     weight: 40
+  linodians:
+  - name: "website"
+    url: "https://www.linodians.com"
+    weight: 10
+  - name: "forum"
+    url: "https://discuss.linodians.com"
+    weight: 20
+  - name: "Mastodon"
+    url: "https://social.linodians.com"
+    weight: 30
